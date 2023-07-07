@@ -1,4 +1,4 @@
-# Container Action Template
+# action-yaml-exporter
 
 ![Logo](https://img.raftech.nl/white_logo_color1_background.png)
 
