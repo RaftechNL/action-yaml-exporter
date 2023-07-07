@@ -53,7 +53,7 @@ jobs:
 ```
 
 ## License
-[![License](https://img.shields.io/github/license/raftechnl/public-ecr)](./LICENSE)
+[![License](https://img.shields.io/github/license/raftechnl/action-yaml-exporter)](./LICENSE)
                 |
 ## Contributing
 
