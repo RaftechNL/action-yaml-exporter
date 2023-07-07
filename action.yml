@@ -1,12 +1,35 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'action-yaml-exporter'
+description: 'Export YAML properties'
+inputs:
+  source-file:
+    description: 'Path to file to be used as source'
+    required: true
+  yaml-properties:  
+    description: 'YAML properties to be exported'
+    required: true
+  export-to-ci-env:
+    description: 'Export to environment variables in the CI'
+    required: false
+    default: "false"
+  export-to-ci-outputs:
+    description: 'Export to action outputs in the CI'
+    required: false
+    default: "false"    
+  export-to-env-file:
+    description: 'Export to env file'
+    required: false
+    default: "false"          
+  env-file:
+    description: 'Path/Name of the env file to be created'
+    required: false
+    default: "env.export"     
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.source-file }}
+    - ${{ inputs.yaml-properties }}
+    - ${{ inputs.export-to-ci-env }}
+    - ${{ inputs.export-to-ci-outputs }}
+    - ${{ inputs.export-to-env-file }}
+    - ${{ inputs.env-file }}                  
