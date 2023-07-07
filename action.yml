@@ -4,7 +4,7 @@ inputs:
   source-file:
     description: 'Path to file to be used as source'
     required: true
-  yaml-properties:  
+  yaml-properties:
     description: 'YAML properties to be exported'
     required: true
   export-to-ci-env:
@@ -14,15 +14,19 @@ inputs:
   export-to-ci-outputs:
     description: 'Export to action outputs in the CI'
     required: false
-    default: "false"    
+    default: "false"
   export-to-env-file:
     description: 'Export to env file'
     required: false
-    default: "false"          
+    default: "false"
+  prefix:
+    description: 'Prefix to be used for the exported values'
+    required: false
+    default: ""
   env-file:
     description: 'Path/Name of the env file to be created'
     required: false
-    default: "env.export"     
+    default: "env.export"
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -32,4 +36,5 @@ runs:
     - ${{ inputs.export-to-ci-env }}
     - ${{ inputs.export-to-ci-outputs }}
     - ${{ inputs.export-to-env-file }}
-    - ${{ inputs.env-file }}                  
+    - ${{ inputs.env-file }}
+    - ${{ inputs.prefix }}    
