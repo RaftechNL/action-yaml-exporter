@@ -1,5 +1,16 @@
 # Container Action Template
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+![Logo](https://img.raftech.nl/white_logo_color1_background.png)
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+Github Action allowing for dynamic & path based export of properties from YAML files using YQ under the hood.
+
+#
+[![License](https://img.shields.io/github/license/raftechnl/public-ecr)](./LICENSE)
+                |
+## Contributing
+
+Contributions are always welcome!
+
+## Authors
+
+- [@rafpe](https://www.github.com/rafpe)
